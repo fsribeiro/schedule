@@ -3,7 +3,6 @@
 var http = require("http");
 var app = require("./config/express")();
 var tarefaEnvioEmail = require("./app/controllers/taks/envioEmail")
-var rota = require("./app/routes/teste")
 
 app.get('/lixo', async(req, res) =>{
     res.send("Dia do lixo de pé")
