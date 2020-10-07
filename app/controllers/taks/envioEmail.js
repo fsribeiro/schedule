@@ -9,8 +9,8 @@ var tarefaEnvio = () => {
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
-        enviarEmailLixo.hour = 18
-        enviarEmailLixo.minute = 55
+        enviarEmailLixo.hour = 19
+        enviarEmailLixo.minute = 15
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
