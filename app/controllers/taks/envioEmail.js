@@ -9,12 +9,12 @@ var tarefaEnvio = () => {
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
-        enviarEmailLixo.hour = 21
-        enviarEmailLixo.minute = 30
+        enviarEmailLixo.hour = 01
+        enviarEmailLixo.minute = 58
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
-        if(enviarEmailLixo.dayOfWeek == 0 || enviarEmailLixo.dayOfWeek == 2 || enviarEmailLixo.dayOfWeek == 3) {
+       // if(enviarEmailLixo.dayOfWeek == 0 || enviarEmailLixo.dayOfWeek == 2 || enviarEmailLixo.dayOfWeek == 3) {
             schedule.scheduleJob(enviarEmailLixo , function(){
 
             console.log("Envio de email aviso lixo (início previsto às 20:00)... " + new Date().toISOString());
@@ -22,7 +22,7 @@ var tarefaEnvio = () => {
             email()
     
             })
-       }       
+      // }       
     },1000)       
 }
 module.exports = tarefaEnvio
