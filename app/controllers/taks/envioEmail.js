@@ -9,8 +9,8 @@ const email = require("../avisolixo")
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
-        enviarEmailLixo.hour = 02
-        enviarEmailLixo.minute = 55
+        enviarEmailLixo.hour = 03
+        enviarEmailLixo.minute = 00
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
