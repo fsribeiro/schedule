@@ -3,10 +3,7 @@ var schedule = require("node-schedule");
 
 const email = require("../avisolixo")
 
-
-console.log(typeof(email));
-
- async function tarefaEnvio() {
+async function tarefaEnvio() {
 
     //setTimeout(() => {
 
