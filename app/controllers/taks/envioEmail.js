@@ -5,12 +5,12 @@ const email = require("../avisolixo")
 
 async function tarefaEnvio() {
 
-    //setTimeout(() => {
+    setTimeout(() => {
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
-        enviarEmailLixo.hour = 03
-        enviarEmailLixo.minute = 37
+        enviarEmailLixo.hour = 05
+        enviarEmailLixo.minute = 58
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
@@ -23,7 +23,7 @@ async function tarefaEnvio() {
 
             await email()
             
-    //},1000)       
+    },1000)       
 }
 module.exports = tarefaEnvio
 
