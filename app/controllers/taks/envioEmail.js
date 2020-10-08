@@ -8,7 +8,7 @@ async function tarefaEnvio() {
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
         enviarEmailLixo.hour = 05
-        enviarEmailLixo.minute = 13
+        enviarEmailLixo.minute = 17
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 

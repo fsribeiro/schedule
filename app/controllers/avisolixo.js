@@ -20,7 +20,7 @@ var nodemailer = require("nodemailer");
         let info = await remetente.sendMail({
     
             from: '"Não seja porco 🤮" <fs_ribeiro@outlook.com>', // sender address
-            to: "fernando.s.ribeiro@outlook.com, cintiaf.silva@hotmail.com", // list of receivers
+            to: "fernando.s.ribeiro@outlook.com", // list of receivers
             subject: "Dia de lixo ✔", // Subject line
             text: "Bora jogar o lixo fora? Larga de preguiça.", // plain text body
             html: `<b>Bora jogar o lixo fora? Larga de preguiça.</b> ${emoji}`, // html body */
