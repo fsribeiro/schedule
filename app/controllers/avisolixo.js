@@ -3,10 +3,10 @@
 var nodemailer = require("nodemailer");
 
 
-    async function envioEmail() {
+    function envioEmail() {
         console.log("chegou no controller");
         
-        var remetente = await nodemailer.createTransport({
+        var remetente = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 587,
             secure: false,
