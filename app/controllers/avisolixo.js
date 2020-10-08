@@ -17,7 +17,7 @@ var nodemailer = require("nodemailer");
 
         const emoji = '&#128540'
 
-        let info = await remetente.sendMail({
+        let info = remetente.sendMail({
     
             from: '"Não seja porco 🤮" <fs_ribeiro@outlook.com>', // sender address
             to: "fernando.s.ribeiro@outlook.com", // list of receivers
