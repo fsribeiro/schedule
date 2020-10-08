@@ -11,8 +11,8 @@ var nodemailer = require("nodemailer");
             port: 587,
             secure: false,
             auth:{
-            user: "fernandoribeirodosantos@gmail.com",
-            pass: "fe19071991121410" }
+            user: "fernando.ribeiro@gmail.com",
+            pass: "nando19071991" }
         });
 
         const emoji = '&#128540'
