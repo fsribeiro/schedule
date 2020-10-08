@@ -7,12 +7,12 @@ var nodemailer = require("nodemailer");
         console.log("chegou no controller");
         
         var remetente = await nodemailer.createTransport({
-            host: "smtp-mail.outlook.com",
+            host: "smtp.gmail.com",
             port: 587,
             secure: false,
             auth:{
-            user: "fs_ribeiro@outlook.com",
-            pass: "Fe121410" }
+            user: "fernando.ribeiro@ramper.com.br",
+            pass: "nando19071991" }
         });
 
         const emoji = '&#128540'
