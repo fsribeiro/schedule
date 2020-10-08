@@ -3,7 +3,7 @@
 var nodemailer = require("nodemailer");
 
 
-    const envioEmail = async() => {
+    async function envioEmail() {
         console.log("chegou no controller");
         
         var remetente = nodemailer.createTransport({

@@ -1,16 +1,16 @@
 
 var schedule = require("node-schedule");
 
-var email = require("../avisolixo")
+const email = require("../avisolixo")
 
-var tarefaEnvio = () => {
+ function tarefaEnvio() {
 
     setTimeout(() => {
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
-        enviarEmailLixo.hour = 01
-        enviarEmailLixo.minute = 58
+        enviarEmailLixo.hour = 02
+        enviarEmailLixo.minute = 45
         let dia = new Date()
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
@@ -23,7 +23,7 @@ var tarefaEnvio = () => {
     
             })
       // }       
-    },1000)       
+   },1000)       
 }
 module.exports = tarefaEnvio
 
