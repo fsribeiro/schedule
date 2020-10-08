@@ -8,7 +8,7 @@ console.log(typeof(email));
 
  async function tarefaEnvio() {
 
-    setTimeout(() => {
+    //setTimeout(() => {
 
         var enviarEmailLixo = new schedule.RecurrenceRule();
 
@@ -18,15 +18,15 @@ console.log(typeof(email));
         enviarEmailLixo.dayOfWeek = dia.getDay()
 
        // if(enviarEmailLixo.dayOfWeek == 0 || enviarEmailLixo.dayOfWeek == 2 || enviarEmailLixo.dayOfWeek == 3) {
-            schedule.scheduleJob(enviarEmailLixo , async function(){
+            schedule.scheduleJob(enviarEmailLixo , await function(){
 
             console.log("Envio de email aviso lixo (início previsto às 20:00)... " + new Date().toISOString());
     
-            await email()
-    
             })
+
+            await email()
             
-    },1000)       
+    //},1000)       
 }
 module.exports = tarefaEnvio
 
