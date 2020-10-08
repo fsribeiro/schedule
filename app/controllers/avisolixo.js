@@ -11,7 +11,7 @@ var nodemailer = require("nodemailer");
             port: 587,
             secure: false,
             auth:{
-            user: "fernando.ribeiro@gmail.com",
+            user: "fernando.ribeiro@ramper.com.br",
             pass: "nando19071991" }
         });
 
