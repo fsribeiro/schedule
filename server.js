@@ -2,13 +2,18 @@
 
 var http = require("http");
 var app = require("./config/express")();
-var tarefaEnvioEmail = require("./app/controllers/taks/envioEmail")
+//var tarefaEnvioEmail = require("./app/controllers/taks/envioEmail")
+const tarefaEnvio2 = require("./app/controllers/taks/envioEmail")
+const ola = require("./app/controllers/taks/teste");
+
 
 app.get('/lixo', async(req, res) =>{
-    res.send("Dia do lixo de pé")
+    console.log(ola);
+    // tarefaEnvio2.tarefaEnvio2()
+    res.send("Dia do lixo de pés")
 })
 
-tarefaEnvioEmail()
+tarefaEnvio2.tarefaEnvio2()
 const PORT = process.env.PORT || 3500
 
 http.createServer(app) 
