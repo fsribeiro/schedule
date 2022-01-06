@@ -7,7 +7,7 @@ const tarefaEnvio = () => {
     setTimeout(() => {
         let enviarEmailLixo = new schedule.RecurrenceRule();
         enviarEmailLixo.hour = 16;
-        enviarEmailLixo.minute = 27;
+        enviarEmailLixo.minute = 36;
 
         schedule.scheduleJob(enviarEmailLixo , function(){
             console.log("Envio de email aviso lixo (início previsto às 6:39)... " + new Date().toISOString());
