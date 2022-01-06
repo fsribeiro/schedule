@@ -1,30 +1,22 @@
 
-var schedule = require("node-schedule");
-
+let schedule = require("node-schedule");
 const email = require("../avisolixo")
 
-async function tarefaEnvio() {
+const tarefaEnvio = () => {
 
-        var enviarEmailLixo = new schedule.RecurrenceRule();
+    setTimeout(() => {
+        let enviarEmailLixo = new schedule.RecurrenceRule();
+        enviarEmailLixo.hour = 16;
+        enviarEmailLixo.minute = 00;
+        
+        schedule.scheduleJob(enviarEmailLixo , function(){
+            console.log("Envio de email aviso lixo (início previsto às 6:39)... " + new Date().toISOString());
+            email();
+        });  
+    },2000);
+};
 
-        enviarEmailLixo.hour = 06
-        enviarEmailLixo.minute = 26
-        let dia = new Date()
-        enviarEmailLixo.dayOfWeek = dia.getDay()
-
-       // if(enviarEmailLixo.dayOfWeek == 0 || enviarEmailLixo.dayOfWeek == 2 || enviarEmailLixo.dayOfWeek == 3) {
-            schedule.scheduleJob(enviarEmailLixo , async function(){
-
-            console.log("Envio de email aviso lixo (início previsto às 20:00)... " + new Date().toISOString());
-
-                await email()
-    
-            })
-
-            
-}
-
-module.exports = tarefaEnvio
+module.exports = tarefaEnvio;
 
        
 

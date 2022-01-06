@@ -1,29 +1,27 @@
 "use strict"
 
-var nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 
-
-    function envioEmail() {
+    const envioEmail = async() => {
         console.log("chegou no controller");
         
-        var remetente = nodemailer.createTransport({
-            host: "smtp.gmail.com",
+        let remetente = nodemailer.createTransport({
+            host: "SMTP.office365.com",
             port: 587,
             secure: false,
             auth:{
-            user: "fernandoribeirodosantos@gmail.com",
-            pass: "fe19071991121410" }
+            user: "fs_ribeiro@outlook.com",
+            pass: "Fe!@#121410" }
         });
 
         const emoji = '&#128540'
 
-        let info = remetente.sendMail({
-    
-            from: '"Não seja porco 🤮" <fs_ribeiro@outlook.com>', // sender address
-            to: "fernando.s.ribeiro@outlook.com", // list of receivers
-            subject: "Dia de lixo ✔", // Subject line
-            text: "Bora jogar o lixo fora? Larga de preguiça.", // plain text body
-            html: `<b>Bora jogar o lixo fora? Larga de preguiça.</b> ${emoji}`, // html body */
+        const info = await remetente.sendMail({
+            from: '"Não seja porco 🤮" <fs_ribeiro@outlook.com>',
+            to: "fernando.s.ribeiro@outlook.com",
+            subject: "Dia de lixo ✔",
+            text: "Bora jogar o lixo fora? Larga de preguiça.",
+            html: `<b>Bora jogar o lixo fora? Larga de preguiça.</b> ${emoji}`,
         });
 
         if(info) {
