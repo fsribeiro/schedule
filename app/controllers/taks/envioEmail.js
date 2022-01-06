@@ -19,9 +19,9 @@ const email = require("../avisolixo");
 exports.tarefaEnvio2 = async () => {
     console.log('log');
     let enviarEmailLixo = new schedule.RecurrenceRule();
-    const resp = await schedule.scheduleJob(enviarEmailLixo , function(){
+    const resp = await schedule.scheduleJob(enviarEmailLixo , async function(){
         console.log("Envio de email aviso lixo (início previsto às 6:39)... " + new Date().toISOString());
-        email();
+        await email();
     });  
 
     return resp;

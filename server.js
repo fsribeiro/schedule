@@ -9,11 +9,11 @@ const ola = require("./app/controllers/taks/teste");
 
 app.get('/lixo', async(req, res) =>{
     console.log(ola);
-    // tarefaEnvio2.tarefaEnvio2()
+    tarefaEnvio2.tarefaEnvio2()
     res.send("Dia do lixo de pés")
 })
 
-tarefaEnvio2.tarefaEnvio2()
+//tarefaEnvio2.tarefaEnvio2()
 const PORT = process.env.PORT || 3500
 
 http.createServer(app) 
