@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
         console.log("chegou no controller");
         
         let remetente = nodemailer.createTransport({
-            host: "SMTP.office365.com",
+            host: "smtp.office365.com",
             port: 587,
             secure: false,
             auth:{
