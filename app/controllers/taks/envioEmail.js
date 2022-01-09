@@ -1,34 +1,22 @@
 
 let schedule = require("node-schedule");
-const email = require("../avisolixo");
+const infoMail = require("../avisolixo");
 
-const tarefaEnvio = () => {
+const taskSend = () => {
 
     setTimeout(() => {
-        let enviarEmailLixo = new schedule.RecurrenceRule();
-        enviarEmailLixo.hour = 15;
-        enviarEmailLixo.minute = 34;
+        let sendMail = new schedule.RecurrenceRule();
+        sendMail.hour = 06;
+        sendMail.minute = 39;
 
-        schedule.scheduleJob(enviarEmailLixo , function(){
-            console.log("Envio de email aviso lixo (início previsto às 6:39)... " + new Date().toISOString());
-            email();
+        schedule.scheduleJob(sendMail , function(){
+            console.log("Message for exibition in terminal  (início previsto às 6:39)... " + new Date().toISOString());
+            infoMail();
         });  
     },2000);
-}
+};
 
-/* exports.tarefaEnvio2 = async () => {
-    console.log('log');
-    let enviarEmailLixo = new schedule.RecurrenceRule();
-    const resp = await schedule.scheduleJob(enviarEmailLixo , async function(){
-        console.log("Envio de email aviso lixo (início previsto às 6:39)... " + new Date().toISOString());
-        await email();
-    });  
-
-    return resp;
-
-}; */
-
-module.exports = tarefaEnvio;
+module.exports = taskSend;
        
 
 
